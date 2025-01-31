@@ -14,28 +14,23 @@ Soilitical's API provides endpoints for interacting with our machine learning mo
 
 **GET https://apisoilitical.pythonanywhere.com/model-info**
 
-
 **Example Response:**
 
 ```json
 {
-    "model_info": {
-        "model_type": "RandomForestClassifier",
-        "n_features": 6,
-        "n_estimators": 100,
-        "max_depth": 15,
-        "feature_importances": [
-            0.14326060206149363,
-            0.18178319059935868,
-            0.2145381231970259,
-            0.11872886382040583,
-            0.2638537653793756,
-            0.07783545494234051
-        ]
-    }
+	"model_info": {
+		"model_type": "RandomForestClassifier",
+		"n_features": 6,
+		"n_estimators": 100,
+		"max_depth": 15,
+		"feature_importances": [
+			0.14326060206149363, 0.18178319059935868, 0.2145381231970259,
+			0.11872886382040583, 0.2638537653793756, 0.07783545494234051
+		]
+	}
 }
 ```
-    
+
 ### 2. Make Prediction
 
 - **Endpoint:** `/predict`
@@ -44,34 +39,35 @@ Soilitical's API provides endpoints for interacting with our machine learning mo
 
 **Request Format:**
 
-***Headers:***
+**_Headers:_**
 
 ```http
 Content-Type: application/json
 ```
-# **Body:**
-```json
-{
-    "N": 42,
-    "P": 55,
-    "K": 42,
-    "Humidity": 3,
-    "Temp": 35,
-    "PH": 7
-}
-```
 
 ### Example Request: POST https://apisoilitical.pythonanywhere.com/predict
 
-### Example Response: 
+# **Body:**
+
 ```json
 {
-    "prediction": "FavaBean"
+	"soil_type": "clayey soil - loamy soil",
+	"ec_value": 0.97,
+	"temperature": 23.0,
+	"n_value": 23.85,
+	"p_value": 15.61,
+	"k_value": 20.49
 }
 ```
 
+### Example Response:
+
+```json
+{
+	"prediction": "Mangoes"
+}
+```
 
 ## **Postman Example:**
+
 ![image](https://github.com/user-attachments/assets/3c90d27c-cc79-4479-b37b-c95cd4ec12e4)
-
-
