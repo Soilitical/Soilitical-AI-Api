@@ -4,11 +4,10 @@ Soilitical's API provides an endpoint for interacting with our machine learning 
 
 ## 🚀 **Table of Contents**
 
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [API Documentation](#api-documentation)
-- [Contribution Guidelines](#contribution-guidelines)
-- [License](#license)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [API Documentation](#-api-documentation)
+- [Contribution Guidelines](#-contribution-guidelines)
 
 ## 📦 **Installation**
 
@@ -31,9 +30,9 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-### **🔧 Configuration**
+## 🔧 **Configuration**
 
-## 1. Environment Variables
+### 1. Environment Variables
 
 Create a .env file in the root directory with the following variables:
 
@@ -45,9 +44,9 @@ SECURITY_KEY=your-secret-key-here
 DEBUG=True
 ```
 
-### **🚀 API Documentation**
+## 🚀 **API Documentation**
 
-## 1. Make Prediction
+### 1. Make Prediction
 
 - **Endpoint:** `/predict`
 - **Method:** `POST`
@@ -61,7 +60,7 @@ DEBUG=True
 Content-Type: application/json
 ```
 
-# **Request Body:**
+### **Request Body:**
 
 ```json
 {
@@ -92,9 +91,17 @@ curl -X POST https://api_example.com/predict \
 
 ### Error Handling
 
-- **400 Bad Request: Invalid input format or missing required fields**
-- **500 Internal Server Error: Model prediction failed**
+- **400 Bad Request:** Invalid input format or missing required fields
+- **500 Internal Server Error:** Model prediction failed
 
-## **Prediciton Example On Website: ( Live at: https://soilitical.netlify.app/)**
+## **Prediction Example On Website: (Live at: [Soilitical](https://soilitical.netlify.app/))**
 
 ![Prediction](image.png)
+
+## 🎨 **Contribution Guidelines**
+
+We welcome contributions to improve the API. Please follow these guidelines:
+
+- Fork the repository and create a new branch.
+- Ensure your code follows best practices and is well-documented.
+- Open a pull request with a detailed description of your changes.
