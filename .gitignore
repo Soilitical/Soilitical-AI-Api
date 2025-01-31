@@ -5,3 +5,4 @@ checking models
 txt.txt
 Notebook
 db.sqlite3
+.env
