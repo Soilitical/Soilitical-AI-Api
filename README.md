@@ -41,6 +41,6 @@ Content-Type: application/json
 }
 ```
 
-## **Postman Example:**
+## **Prediciton Example On Website: ( Live at: https://soilitical.netlify.app/)**
 
 ![Prediction](image.png)
