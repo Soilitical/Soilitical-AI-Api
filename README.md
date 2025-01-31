@@ -35,7 +35,7 @@ Soilitical's API provides endpoints for interacting with our machine learning mo
     }
 }
 ```
-
+    
 ### 2. Make Prediction
 
 - **Endpoint:** `/predict`

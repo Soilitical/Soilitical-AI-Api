@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import PredictionInputSerializer
 
-MODEL_PATH = "random_forest_model.pbz2"
+MODEL_PATH = "XGBoost.pbz2"
 ENCODER_PATH = "label_encoder.pbz2"
 
 def load_pbz2(filename):
