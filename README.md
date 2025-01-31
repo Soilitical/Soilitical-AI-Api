@@ -1,10 +1,53 @@
 # 🌱 **Soilitical API**
 
-Soilitical's API provides an endpoint for interacting with our machine learning model, designed to assist in predicting agricultural outcomes based on various input parameters. This API is built using Django and offers one main endpoint.
+Soilitical's API provides an endpoint for interacting with our machine learning model, designed to predict agricultural outcomes based on various input parameters. This API is built using Django and offers one main endpoint.
 
-## 🚀 **Endpoint**
+## 🚀 **Table of Contents**
 
-### Make Prediction
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [API Documentation](#api-documentation)
+- [Contribution Guidelines](#contribution-guidelines)
+- [License](#license)
+
+## 📦 **Installation**
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-repository/soilitical-api.git
+cd soilitical-api
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Database Setup
+
+```bash
+python manage.py migrate
+```
+
+### **🔧 Configuration**
+
+## 1. Environment Variables
+
+Create a .env file in the root directory with the following variables:
+
+```bash
+# SECURITY_KEY must be a random string
+SECURITY_KEY=your-secret-key-here
+
+# DEBUG mode (set to False for production)
+DEBUG=True
+```
+
+### **🚀 API Documentation**
+
+## 1. Make Prediction
 
 - **Endpoint:** `/predict`
 - **Method:** `POST`
@@ -18,9 +61,7 @@ Soilitical's API provides an endpoint for interacting with our machine learning 
 Content-Type: application/json
 ```
 
-### Example Request: POST https://apisoilitical.pythonanywhere.com/predict
-
-# **Body:**
+# **Request Body:**
 
 ```json
 {
@@ -33,6 +74,14 @@ Content-Type: application/json
 }
 ```
 
+### Example Request:
+
+```bash
+curl -X POST https://api_example.com/predict \
+  -H "Content-Type: application/json" \
+  -d '{"soil_type":"clayey soil - loamy soil","ec_value":0.97,"temperature":23.0,"n_value":23.85,"p_value":15.61,"k_value":20.49}'
+```
+
 ### Example Response:
 
 ```json
@@ -40,6 +89,11 @@ Content-Type: application/json
 	"prediction": "Mangoes"
 }
 ```
+
+### Error Handling
+
+- **400 Bad Request: Invalid input format or missing required fields**
+- **500 Internal Server Error: Model prediction failed**
 
 ## **Prediciton Example On Website: ( Live at: https://soilitical.netlify.app/)**
 
