@@ -70,4 +70,4 @@ Content-Type: application/json
 
 ## **Postman Example:**
 
-![image](https://github.com/user-attachments/assets/3c90d27c-cc79-4479-b37b-c95cd4ec12e4)
+![Prediction](image.png)
