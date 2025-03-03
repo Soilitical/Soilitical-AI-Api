@@ -1,6 +1,6 @@
 # 🌱 **Soilitical API**
 
-Soilitical's API provides an endpoint for interacting with our machine learning model, designed to predict agricultural outcomes based on various input parameters. This API is built using Django and offers one main endpoint.
+Soilitical's API provides an endpoint for interacting with our machine learning model, designed to predict the most suitable crop to grow based on various input parameters. This API is built using Django and offers a single endpoint for receiving the prediction.
 
 ## 🚀 **Table of Contents**
 
